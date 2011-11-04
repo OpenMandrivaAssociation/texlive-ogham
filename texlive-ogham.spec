@@ -1,3 +1,9 @@
+# revision 15878
+# category Package
+# catalog-ctan /fonts/ogham
+# catalog-date 2008-09-27 14:07:03 +0200
+# catalog-license other-free
+# catalog-version undef
 Name:		texlive-ogham
 Version:	20080927
 Release:	1
@@ -41,6 +47,7 @@ due to Peter Flynn and Dan Luecking.).
 %{_texmfdistdir}/fonts/source/public/ogham/ogham.mf
 %{_texmfdistdir}/fonts/tfm/public/ogham/ogham.tfm
 %doc %{_texmfdistdir}/doc/latex/ogham/testfont.pdf
+%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -51,3 +58,5 @@ due to Peter Flynn and Dan Luecking.).
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar fonts doc %{buildroot}%{_texmfdistdir}
+mkdir -p %{buildroot}%{_tlpkgobjdir}
+cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
