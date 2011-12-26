@@ -1,53 +1,52 @@
-# revision 15878
+# revision 24876
 # category Package
 # catalog-ctan /fonts/ogham
-# catalog-date 2008-09-27 14:07:03 +0200
-# catalog-license other-free
+# catalog-date 2011-12-19 12:56:45 +0100
+# catalog-license pd
 # catalog-version undef
 Name:		texlive-ogham
-Version:	20080927
+Version:	20111219
 Release:	1
 Summary:	Fonts for typesetting Ogham script
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/fonts/ogham
-License:	OTHER-FREE
+License:	PD
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/ogham.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/ogham.doc.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
 Requires(post):	texlive-kpathsea
-Conflicts:	texlive-texmf <= 20110705-3
 
 %description
 The font provides the Ogham alphabet, which is found on a
 number of Irish and Pictish carvings dating from the 4th
-century AD. The font is distributed as a MetaFont program,
-which has been patched (with the author's permission) for
-stability at different output device resolutions. (Thanks are
-due to Peter Flynn and Dan Luecking.).
+century AD. The font is distributed as Metafont source, which
+has been patched (with the author's permission) for stability
+at different output device resolutions. (Thanks are due to
+Peter Flynn and Dan Luecking.).
 
 %pre
-    %_texmf_mktexlsr_pre
+    %{_sbindir}/texlive.post
 
 %post
-    %_texmf_mktexlsr_post
+    %{_sbindir}/texlive.post
 
 %preun
     if [ $1 -eq 0 ]; then
-	%_texmf_mktexlsr_pre
+	%{_sbindir}/texlive.post
     fi
 
 %postun
     if [ $1 -eq 0 ]; then
-	%_texmf_mktexlsr_post
+	%{_sbindir}/texlive.post
     fi
 
 #-----------------------------------------------------------------------
 %files
 %{_texmfdistdir}/fonts/source/public/ogham/ogham.mf
 %{_texmfdistdir}/fonts/tfm/public/ogham/ogham.tfm
-%doc %{_texmfdistdir}/doc/latex/ogham/testfont.pdf
+%doc %{_texmfdistdir}/doc/fonts/ogham/testfont.pdf
 %doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
