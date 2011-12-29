@@ -26,16 +26,8 @@ has been patched (with the author's permission) for stability
 at different output device resolutions. (Thanks are due to
 Peter Flynn and Dan Luecking.).
 
-%pre
-    %{_sbindir}/texlive.post
-
 %post
     %{_sbindir}/texlive.post
-
-%preun
-    if [ $1 -eq 0 ]; then
-	%{_sbindir}/texlive.post
-    fi
 
 %postun
     if [ $1 -eq 0 ]; then
@@ -47,7 +39,6 @@ Peter Flynn and Dan Luecking.).
 %{_texmfdistdir}/fonts/source/public/ogham/ogham.mf
 %{_texmfdistdir}/fonts/tfm/public/ogham/ogham.tfm
 %doc %{_texmfdistdir}/doc/fonts/ogham/testfont.pdf
-%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -58,5 +49,3 @@ Peter Flynn and Dan Luecking.).
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar fonts doc %{buildroot}%{_texmfdistdir}
-mkdir -p %{buildroot}%{_tlpkgobjdir}
-cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
