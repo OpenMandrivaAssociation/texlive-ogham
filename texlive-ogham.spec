@@ -49,3 +49,21 @@ Peter Flynn and Dan Luecking.).
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar fonts doc %{buildroot}%{_texmfdistdir}
+
+
+%changelog
+* Wed Jan 04 2012 Paulo Andrade <pcpa@mandriva.com.br> 20111219-2
++ Revision: 754505
+- Rebuild to reduce used resources
+
+* Mon Dec 26 2011 Paulo Andrade <pcpa@mandriva.com.br> 20111219-1
++ Revision: 745304
+- texlive-ogham
+
+* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 20080927-1
++ Revision: 719155
+- texlive-ogham
+- texlive-ogham
+- texlive-ogham
+- texlive-ogham
+
