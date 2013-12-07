@@ -6,7 +6,7 @@
 # catalog-version undef
 Name:		texlive-ogham
 Version:	20111219
-Release:	5
+Release:	6
 Summary:	Fonts for typesetting Ogham script
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/fonts/ogham
