@@ -5,7 +5,7 @@
 # catalog-license pd
 # catalog-version undef
 Name:		texlive-ogham
-Version:	20170414
+Version:	20180303
 Release:	1
 Summary:	Fonts for typesetting Ogham script
 Group:		Publishing
