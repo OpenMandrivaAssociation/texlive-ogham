@@ -1,6 +1,6 @@
 Name:		texlive-ogham
 Version:	24876
-Release:	1
+Release:	2
 Summary:	Fonts for typesetting Ogham script
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/fonts/ogham
