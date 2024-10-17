@@ -3,7 +3,7 @@ Version:	24876
 Release:	2
 Summary:	Fonts for typesetting Ogham script
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/fonts/ogham
+URL:		https://www.ctan.org/tex-archive/fonts/ogham
 License:	PD
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/ogham.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/ogham.doc.r%{version}.tar.xz
